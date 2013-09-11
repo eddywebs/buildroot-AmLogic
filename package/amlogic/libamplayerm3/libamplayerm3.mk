@@ -3,8 +3,8 @@
 # libamplayer
 #
 #############################################################
-LIBAMPLAYERM3_VERSION:=18055fb6ea005258b7fc1ceb8b2aebf71dfecea0
-LIBAMPLAYERM3_SITE=git://github.com/Pivosgroup/libamplayer-m3.git
+LIBAMPLAYERM3_VERSION:=e690701dbe22a79a2ed55953031713013e5d7d7e
+LIBAMPLAYERM3_SITE=git://github.com/j1nx/libamplayer-m3.git
 LIBAMPLAYERM3_INSTALL_STAGING=YES
 LIBAMPLAYERM3_INSTALL_TARGET=YES
 LIBAMPLAYERM3_SITE_METHOD=git
@@ -47,10 +47,10 @@ define LIBAMPLAYERM3_INSTALL_TARGET_CMDS
 
  mkdir -p $(TARGET_DIR)/lib/firmware
  cp -rf $(@D)/amadec/firmware/*.bin $(TARGET_DIR)/lib/firmware
- cp -f $(STAGING_DIR)/usr/lib/libamadec.so $(TARGET_DIR)/usr/lib/
+ cp -fd $(STAGING_DIR)/usr/lib/libamadec.so* $(TARGET_DIR)/usr/lib/
 
- cp -f $(STAGING_DIR)/usr/lib/libamcodec.so.* $(TARGET_DIR)/usr/lib/
- cp -f $(STAGING_DIR)/usr/lib/libamplayer.so $(TARGET_DIR)/usr/lib/
+ cp -fd $(STAGING_DIR)/usr/lib/libamcodec.so* $(TARGET_DIR)/usr/lib/
+ cp -fd $(STAGING_DIR)/usr/lib/libamplayer.so* $(TARGET_DIR)/usr/lib/
  $(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" INSTALL_DIR="$(TARGET_DIR)/usr/lib" \
   STAGING="$(TARGET_DIR)/usr" PREFIX="$(STAGING_DIR)/usr" -C $(@D)/amplayer install
 endef

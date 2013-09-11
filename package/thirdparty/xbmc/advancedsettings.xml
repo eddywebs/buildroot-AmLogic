@@ -2,6 +2,11 @@
   <enablenetworkmanager>1</enablenetworkmanager>
   <showexitbutton>false</showexitbutton>
 
+  <pvr>
+    <minvideocachelevel>50</minvideocachelevel>
+    <minaudiocachelevel>50</minaudiocachelevel>
+  </pvr>
+
   <hidesettings>
     <setting>lookandfeel.soundskin</setting>
     <setting>videoplayer.rendermethod</setting>
@@ -10,9 +15,6 @@
     <setting>videoplayer.usedisplayasclock</setting>
     <setting>videoplayer.synctype</setting>
     <setting>audiocds</setting>
-    <setting>karaoke</setting>
-    <setting>videoscreen.screenmode</setting>
-    <setting>videoscreen.screen</setting>
     <setting>videoscreen.vsync</setting>
     <setting>videoscreen.testpattern</setting>
     <setting>audiooutput.mode</setting>
@@ -24,5 +26,4 @@
     <setting>input.remoteaskeyboard</setting>
     <setting>audiooutput.guisoundmode</setting>
   </hidesettings>
-
 </advancedsettings>
